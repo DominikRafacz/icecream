@@ -8,6 +8,13 @@
 
 <title>User-friendly debug statements — ic • icecream</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -41,6 +48,7 @@
 
 <meta property="og:title" content="User-friendly debug statements — ic" />
 <meta property="og:description" content="User-friendly debug statements" />
+<meta property="og:image" content="https://www.lewinfox.github.io/icecream/logo.svg" />
 
 
 
@@ -89,7 +97,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/lewinfox/icecream/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -104,7 +117,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>User-friendly debug statements</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/lewinfox/icecream/blob/master/R/ic.R'><code>R/ic.R</code></a></small>
     <div class="hidden name"><code>ic.Rd</code></div>
     </div>
 
@@ -128,6 +141,14 @@
     <p>If <code>x</code> is an expression, returns the result of evaluating <code>x</code>. If <code>x</code> is missing nothing
 is returned.</p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='va'>f</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='va'>x</span> <span class='op'>&lt;</span> <span class='fl'>0</span>
+
+<span class='fu'>ic</span><span class='op'>(</span><span class='fu'>f</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span><span> ic| </span><span style='color: #262626;background-color: #DADADA;'>`f(1)`</span><span>: logi FALSE</span></div><div class='input'>
+<span class='fu'>ic</span><span class='op'>(</span><span class='fu'>f</span><span class='op'>(</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> ic| </span><span style='color: #262626;background-color: #DADADA;'>`f(-1)`</span><span>: logi TRUE</span></div><div class='input'>
+</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -139,7 +160,7 @@ is returned.</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Lewin Appleton-Fox.</p>
+  <p>Developed by <a href='https://www.github.com/lewinfox'>Lewin Appleton-Fox</a>, <a href='https://github.com/DominikRafacz'>Dominik Rafacz</a>.</p>
 </div>
 
 <div class="pkgdown">

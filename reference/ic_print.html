@@ -8,6 +8,13 @@
 
 <title>Print icecream messages — ic_print • icecream</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -42,6 +49,7 @@
 <meta property="og:title" content="Print icecream messages — ic_print" />
 <meta property="og:description" content="The printing logic depends on how the ic() function has been called and what user options are
 set." />
+<meta property="og:image" content="https://www.lewinfox.github.io/icecream/logo.svg" />
 
 
 
@@ -90,7 +98,12 @@ set." />
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/lewinfox/icecream/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -105,7 +118,7 @@ set." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Print icecream messages</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/lewinfox/icecream/blob/master/R/print.R'><code>R/print.R</code></a></small>
     <div class="hidden name"><code>ic_print.Rd</code></div>
     </div>
 
@@ -114,7 +127,12 @@ set." />
 set.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ic_print</span><span class='op'>(</span><span class='va'>loc</span>, <span class='va'>parent_ref</span>, <span class='va'>expression</span>, <span class='va'>value</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>ic_print</span><span class='op'>(</span>
+  <span class='va'>loc</span>,
+  <span class='va'>parent_ref</span>,
+  deparsed_expression <span class='op'>=</span> <span class='fu'>missing_arg</span><span class='op'>(</span><span class='op'>)</span>,
+  value <span class='op'>=</span> <span class='fu'>missing_arg</span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -129,12 +147,14 @@ number and character index) or an environment.</p></td>
       <td><p>The calling function.</p></td>
     </tr>
     <tr>
-      <th>expression</th>
-      <td><p>The deparsed expression (if present) on which <code><a href='ic.html'>ic()</a></code> was called.</p></td>
+      <th>deparsed_expression</th>
+      <td><p>The deparsed expression (if present) on which <code><a href='ic.html'>ic()</a></code> was called. If
+missing (default value), only evaluation context is printed.</p></td>
     </tr>
     <tr>
       <th>value</th>
-      <td><p>The result of evaluating <code>expression</code>.</p></td>
+      <td><p>The result of evaluating <code>deparsed_expression</code>. If expression is missing (default
+value), this argument should also be missing.</p></td>
     </tr>
     </table>
 
@@ -154,7 +174,7 @@ its output string, invisibly.</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Lewin Appleton-Fox.</p>
+  <p>Developed by <a href='https://www.github.com/lewinfox'>Lewin Appleton-Fox</a>, <a href='https://github.com/DominikRafacz'>Dominik Rafacz</a>.</p>
 </div>
 
 <div class="pkgdown">
